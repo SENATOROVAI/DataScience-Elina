@@ -116,7 +116,6 @@ repos:
                - types-setuptools
 
         args:
-          - --install-types
           - --ignore-missing-imports
           - --disallow-untyped-calls
           - --disallow-untyped-defs
@@ -131,6 +130,8 @@ repos:
           - --disallow-any-generics
           - --disallow-subclassing-any
           - --local-partial-types
+          - --non-interactive
+          - --install-types
 
 
   - repo: https://github.com/pre-commit/mirrors-mypy
@@ -138,7 +139,6 @@ repos:
     hooks:
       - id: mypy
         args:
-          - --install-types
           - --ignore-missing-imports
           - --disallow-untyped-calls
           - --disallow-untyped-defs
@@ -153,6 +153,8 @@ repos:
           - --disallow-any-generics
           - --disallow-subclassing-any
           - --local-partial-types
+          - --non-interactive
+          - --install-types
         additional_dependencies:
                - mypy
                - pandas-stubs
