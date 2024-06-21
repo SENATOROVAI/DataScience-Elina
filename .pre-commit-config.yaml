@@ -83,7 +83,7 @@ repos:
       - id: nbqa-flake8
         args:
           - --ignore=E501,E712,W291,F632,E203,F821
-          - --exclude=.*
+          - --exclude=.*,__init__.py
         name: nbqa-flake8
         description: Run 'flake8' on a Jupyter Notebook
         entry: nbqa flake8
@@ -100,8 +100,8 @@ repos:
     hooks:
       - id: flake8
         args:
-          - --ignore=E501,E712,W291,F632,E203,F821
-          - --exclude=.*
+          - --ignore=E501,E712,W291,F632,E203,,F821
+          - --exclude=.*,__init__.py
         additional_dependencies:
           - flake8-variables-names
           - pep8-naming
